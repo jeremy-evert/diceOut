@@ -14,7 +14,21 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/rollResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Let us begin the play time!" />
+
+    <Button
+        android:text="Roll!"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rollResult"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="111dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="25dp"
+        android:onClick="rollDice"
+        android:id="@+id/rollButton" />
 </RelativeLayout>

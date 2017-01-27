@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.appindexing.Action;
@@ -17,6 +19,14 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 public class MainActivity extends AppCompatActivity {
+
+    // jpe
+    // field to hold the roll result text
+    TextView rollResult;
+
+    // jpe
+    // field to hold the roll button;
+    Button rollButton;
 
     // jpe
     // create a field to hold our score
@@ -48,11 +58,19 @@ public class MainActivity extends AppCompatActivity {
         score = 0;
 
         // jpe
+        rollResult = (TextView) findViewById(R.id.rollResult);
+        rollButton = (Button) findViewById(R.id.rollButton);
+
+        // jpe
         // create a greeting using toast 4:17 of create a project, variable, and toastt
         Toast.makeText(getApplicationContext(), "Welcome to diceOut friends!", Toast.LENGTH_LONG).show();
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+    }
+
+    public void rollDice(View v){
+        rollResult.setText("Clicked!");
     }
 
     @Override
